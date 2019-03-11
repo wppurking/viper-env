@@ -1,0 +1,12 @@
+---
+debug: true
+api:
+  port: :3001
+db:
+  driver: postgres
+  debug: true
+  max_conn: 20
+  max_idle: 10
+redis:
+  host: :6379
+  db: 6

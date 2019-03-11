@@ -1,0 +1,6 @@
+---
+db:
+  driver: postgres
+  debug: true
+  max_conn: 50
+  max_idle: 20
