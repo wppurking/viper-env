@@ -1,7 +1,6 @@
 package config
 
 import (
-	//"github.com/asaskevich/govalidator"
 	"github.com/spf13/viper"
 )
 
@@ -38,14 +37,11 @@ func Load() error {
 	if err != nil {
 		return err
 	}
-	/*
-		err = viper.Unmarshal(&C)
-		if err != nil {
-			return err
-		}
-		_, err = govalidator.ValidateStruct(C)
-	*/
 	return err
+}
+
+func Unmarshal(rawVal interface{}) error {
+	return viper.Unmarshal(rawVal)
 }
 
 // viperSearchPath 设置 viper 搜索配置文件的路径
