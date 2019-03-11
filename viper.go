@@ -1,8 +1,6 @@
 package config
 
 import (
-	"time"
-
 	//"github.com/asaskevich/govalidator"
 	"github.com/spf13/viper"
 )
@@ -12,11 +10,6 @@ const (
 )
 
 func init() {
-	// 重置整个系统的时区为 UTC, 避免系统间有时区的问题.
-	// 如果是拥有 UI 的系统, 则建议使用本地时区为应用时区, 如果是后端应用, 统一使用 UTC 时区可避免
-	// 应用在不同服务器上运行因为时区的问题发生的各种异常
-	time.Local = time.UTC
-
 	viper.SetConfigName("enviroment")
 	viper.SetConfigType("yml")
 	viperSearchPath(viper.GetViper())
